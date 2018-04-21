@@ -1,0 +1,42 @@
+The aim of the store procedure is to reduce any number of sql statements execution again and again.
+Instead of executing a series of sql statements,we can wrap around a series of sql statements inside store procedure.
+
+1. Create store procedure
+
+DELIMITER //	
+CREATE PROCEDURE sptest1()
+BEGIN
+SELECT brand_title FROM brands; 
+END //
+DELIMITER;
+
+Call store procedure
+CALL sptest1() 
+
+2. Create store procedure with parameters(IN parameter)
+
+IN – is the default mode. When you define an IN parameter in a stored procedure, the calling program has to pass an argument to the stored procedure. In addition, the value of an IN parameter is protected. It means that even the value of the IN parameter is changed inside the stored procedure, its original value is retained after the stored procedure ends. In other words, the stored procedure only works on the copy of the IN parameter.
+
+DELIMITER //
+CREATE PROCEDURE sp_param(IN title VARCHAR(255))
+ BEGIN
+ SELECT * 
+ FROM brands
+ WHERE  brand_title=title;
+ END //
+DELIMITER ;
+
+CALL sp_param('DELL');
+
+3. Multiple parameters
+
+DELIMITER //
+CREATE PROCEDURE sp_param1(IN title1 VARCHAR(255),IN title2 VARCHAR(255))
+ BEGIN
+ SELECT * 
+ FROM brands
+ WHERE  brand_title IN (title1,title2);
+ END //
+DELIMITER ;
+
+For altering store procedure use alter instead of create
