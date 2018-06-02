@@ -1,0 +1,7 @@
+http://csharp-video-tutorials.blogspot.com/2012/09/indexes-in-sql-server-part-35.html
+
+http://csharp-video-tutorials.blogspot.com/2012/09/clustered-and-non-clustered-indexes.html
+
+http://csharp-video-tutorials.blogspot.com/2012/09/unique-and-non-unique-indexes-part-37.html
+
+http://csharp-video-tutorials.blogspot.com/2012/09/advantages-and-disadvantages-of-indexes.html
