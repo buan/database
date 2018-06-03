@@ -57,3 +57,6 @@ Returns all rows except matching rows between two tables are retrieved
 
 Same query,only add 
 where departmentid is NULL
+
+
+http://csharp-video-tutorials.blogspot.com/2012/09/indexes-in-sql-server-part-35.html
